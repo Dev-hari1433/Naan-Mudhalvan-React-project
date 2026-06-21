@@ -7,7 +7,7 @@ FinLux Premium is a next-generation, high-performance personal finance tracking 
 ## 🚀 Key Feature Highlights
 
 ### 1. 🇮🇳 Native Indian Rupee Formatting (₹)
-* Fully customized currency formatting utilizing Lakhs/Crores grouping structures (e.g., `₹1,00,000` and `₹1,00,00,000`) instead of western million/billion separations.
+* Fully customized currency formatting utilizing Lakhs/Crores grouping structures (e.g., `₹1,00,000` and `₹1,00,00,000`) instead of Western million/billion separations.
 
 ### 2. 🤖 Interactive AI Wealth Assistant
 * An embedded, collapsible sidebar chat drawer (**Antigravity AI**) running a client-side inference engine.
@@ -35,43 +35,53 @@ FinLux Premium is a next-generation, high-performance personal finance tracking 
 
 ## 🛠️ Technology Stack
 * **Core Library:** React 19 (Hooks, state sync, local storage persistence).
-* **Build Engine:** Vite 5 (pure JS Rollup bundler configured for Windows compiler stability).
+* **Build Engine:** Vite 5 (Fast, JS-based Rollup bundler).
 * **Styling System:** Vanilla CSS (Glassmorphism blurs, ambient indigo dropshadows, smooth route transitions).
 * **Charts Engine:** Handcrafted inline responsive SVGs (zero heavy chart library dependencies).
 
 ---
 
-## 📥 Getting Started
+## 📥 Installation & Setup
 
 ### Prerequisites
-Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
+Make sure you have [Node.js](https://nodejs.org/) (v18 or higher recommended) and npm installed.
 
-### Installation
-1. Clone or navigate to the directory:
-   ```bash
-   cd D:/React
-   ```
-2. Install the necessary node modules:
-   ```bash
-   npm install
-   ```
+### 1. Clone the Repository
+Clone this repository to your local machine using Git:
+```bash
+git clone https://github.com/Dev-hari1433/Naan-Mudhalvan-React-project.git
+```
 
-### Scripts
+### 2. Navigate to Directory
+```bash
+cd Naan-Mudhalvan-React-project
+```
 
-* **Run Development Server:**
-  ```bash
-  npm run dev
-  ```
-  *Launches local hot-reload server at http://localhost:5173.*
+### 3. Install Dependencies
+```bash
+npm install
+```
 
-* **Execute Arithmetic Tests:**
-  ```bash
-  npm run test
-  ```
-  *Runs calculations tests for health scoring, Indian currency groupings, and budget allocations.*
+---
 
-* **Build Production Bundle:**
-  ```bash
-  npm run build
-  ```
-  *Compiles assets into minified production files under the `/dist` folder.*
+## 💻 Usage & Scripts
+
+Run these scripts from the project root directory:
+
+### Run Development Server
+```bash
+npm run dev
+```
+Starts the local development server at `http://localhost:5173`. Open this URL in your web browser to interact with the dashboard.
+
+### Execute Arithmetic Tests
+```bash
+npm run test
+```
+Runs the test suite verifying core calculations for health scoring, Indian currency groupings, and budget allocations.
+
+### Build Production Bundle
+```bash
+npm run build
+```
+Compiles and minifies the assets into production-ready files in the `/dist` directory.
