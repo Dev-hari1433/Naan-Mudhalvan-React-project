@@ -292,18 +292,28 @@ export const Reports = ({ transactions = [], settings }) => {
           color: var(--text-secondary);
         }
         @media print {
-          body {
+          html, body {
             background-color: #ffffff !important;
+            background: #ffffff !important;
             color: #000000 !important;
             font-size: 11pt;
-          }
-          .sidebar, .no-print, header, .pagination-controls, .btn {
-            display: none !important;
-          }
-          .main-content {
-            margin-left: 0 !important;
             width: 100% !important;
+            height: auto !important;
+            margin: 0 !important;
             padding: 0 !important;
+            display: block !important;
+          }
+          #root, .app-container, .main-content {
+            position: static !important;
+            display: block !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            height: auto !important;
+            background: #ffffff !important;
+          }
+          .sidebar, .chatbot-sidebar, .no-print, header, .pagination-controls, .btn, .mobile-hamburger {
+            display: none !important;
           }
           .card {
             border: none !important;
@@ -312,20 +322,43 @@ export const Reports = ({ transactions = [], settings }) => {
             padding: 0 !important;
             margin-bottom: 20px;
           }
+          .reports-page-container, .reports-page-container *, .print-only-header, .print-only-header * {
+            color: #000000 !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            text-shadow: none !important;
+          }
+          .custom-table {
+            width: 100% !important;
+            border-collapse: collapse !important;
+          }
           .custom-table th {
             background-color: #f3f4f6 !important;
             color: #000000 !important;
             border-bottom: 2px solid #000000 !important;
+            padding: 10px !important;
           }
           .custom-table td {
             border-bottom: 1px solid #e5e7eb !important;
             color: #000000 !important;
+            padding: 10px !important;
           }
           .print-only-header {
             display: block !important;
           }
+          .reports-page-container .report-row span[style*="var(--color-success)"],
+          .reports-page-container td[style*="var(--color-success)"] {
+            color: #166534 !important; /* readable dark green on white paper */
+            font-weight: 700 !important;
+          }
+          .reports-page-container span[style*="var(--color-danger)"],
+          .reports-page-container td[style*="var(--color-danger)"] {
+            color: #991b1b !important; /* readable dark red on white paper */
+            font-weight: 700 !important;
+          }
           .report-row {
-            color: #000000 !important;
+            border-bottom: 1px dashed #e5e7eb !important;
+            padding: 8px 0 !important;
           }
         }
       `}</style>
