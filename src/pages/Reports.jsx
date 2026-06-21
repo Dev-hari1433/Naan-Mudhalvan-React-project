@@ -292,25 +292,20 @@ export const Reports = ({ transactions = [], settings }) => {
           color: var(--text-secondary);
         }
         @media print {
-          html, body {
+          html, body, #root, .app-container, .main-content, main, .reports-page-container {
+            display: block !important;
+            position: static !important;
+            width: 100% !important;
+            height: auto !important;
+            min-height: 0 !important;
+            max-height: none !important;
+            overflow: visible !important;
+            margin: 0 !important;
+            padding: 0 !important;
             background-color: #ffffff !important;
             background: #ffffff !important;
             color: #000000 !important;
-            font-size: 11pt;
-            width: 100% !important;
-            height: auto !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            display: block !important;
-          }
-          #root, .app-container, .main-content {
-            position: static !important;
-            display: block !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            width: 100% !important;
-            height: auto !important;
-            background: #ffffff !important;
+            box-shadow: none !important;
           }
           .sidebar, .chatbot-sidebar, .no-print, header, .pagination-controls, .btn, .mobile-hamburger {
             display: none !important;
@@ -321,6 +316,9 @@ export const Reports = ({ transactions = [], settings }) => {
             box-shadow: none !important;
             padding: 0 !important;
             margin-bottom: 20px;
+            display: block !important;
+            overflow: visible !important;
+            height: auto !important;
           }
           .reports-page-container, .reports-page-container *, .print-only-header, .print-only-header * {
             color: #000000 !important;
@@ -331,6 +329,7 @@ export const Reports = ({ transactions = [], settings }) => {
           .custom-table {
             width: 100% !important;
             border-collapse: collapse !important;
+            overflow: visible !important;
           }
           .custom-table th {
             background-color: #f3f4f6 !important;
@@ -359,6 +358,8 @@ export const Reports = ({ transactions = [], settings }) => {
           .report-row {
             border-bottom: 1px dashed #e5e7eb !important;
             padding: 8px 0 !important;
+            display: flex !important;
+            justify-content: space-between !important;
           }
         }
       `}</style>
