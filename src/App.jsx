@@ -205,6 +205,7 @@ function App() {
         return (
           <Reports 
             transactions={state.transactions}
+            budgets={state.budgets}
             settings={state.settings}
           />
         );
